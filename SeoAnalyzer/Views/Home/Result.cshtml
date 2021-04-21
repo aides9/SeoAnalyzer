@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SeoAnalyzer.Business.Models.ParsingResult >
+
+@{ ViewData["Title"] = "Result"; }
+
+<h2>Result</h2>
+<table class="table" id="result">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Word)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Frequency)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Word)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Frequency)
+    </td>
+</tr>}
+    </tbody>
+</table>
